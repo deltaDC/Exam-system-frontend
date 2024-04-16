@@ -4,10 +4,16 @@
             <mat-card-header>
                 <mat-card-title>{{q.questionText}}</mat-card-title>
             </mat-card-header>
-            <button (click)="onButtonClick('A', q)" mat-stroked-button color="primary">A {{q.answerOptionA}}</button>
+            <!-- <button (click)="onButtonClick('A', q)" mat-stroked-button color="primary">A {{q.answerOptionA}}</button>
             <button (click)="onButtonClick('B', q)" mat-stroked-button color="primary">B {{q.answerOptionB}}</button>
             <button (click)="onButtonClick('C', q)" mat-stroked-button color="primary">C {{q.answerOptionC}}</button>
-            <button (click)="onButtonClick('D', q)" mat-stroked-button color="primary">D {{q.answerOptionD}}</button>
+            <button (click)="onButtonClick('D', q)" mat-stroked-button color="primary">D {{q.answerOptionD}}</button> -->
+            <mat-button-toggle-group class="mat-button-toggle-group" name="fontStyle" aria-label="Font Style">
+                <mat-button-toggle class="button" value="A">A {{q.answerOptionA}}</mat-button-toggle>
+                <mat-button-toggle class="button" value="B">B {{q.answerOptionB}}</mat-button-toggle>
+                <mat-button-toggle class="button" value="C">C {{q.answerOptionC}}</mat-button-toggle>
+                <mat-button-toggle class="button" value="D">D {{q.answerOptionD}}</mat-button-toggle>
+            </mat-button-toggle-group>
         </mat-card>
     </div>
     <button class="submit-btn" mat-flat-button color="warn">Nộp bài</button>
