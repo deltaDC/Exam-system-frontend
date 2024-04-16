@@ -8,6 +8,7 @@ import { MatCardModule } from '@angular/material/card';
 import axios from 'axios';
 import { endPoint } from '../utils/api';
 import { FormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-auth',
@@ -21,6 +22,8 @@ export class AuthComponent {
 
   username: string = ''
   password: string = ''
+
+  constructor(private router: Router) { }
 
   async onSubmit() {
     // const username = (document.getElementById("username") as HTMLInputElement).value
@@ -39,9 +42,13 @@ export class AuthComponent {
       const response = await axios.post(`${endPoint.login}`, data)
       console.log(response.data)
       localStorage.setItem("token", response.data.token)
+      this.router.navigate(['/home'])
+
 
     } catch (error) {
       console.log(error)
     }
+
+
   }
 }

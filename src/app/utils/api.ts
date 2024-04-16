@@ -5,5 +5,5 @@ export const endPoint = {
     signup: `${baseUrl}/auth/signup`,
 
     getAllExams: `${baseUrl}/exam/get-all-exams`,
-    getQuestionsByExamId: (examId: number) => `${baseUrl}/question/get-all-questions/${examId}`
+    getQuestionsByExamId: (examId: any) => `${baseUrl}/question/get-all-questions/${examId}`
 }

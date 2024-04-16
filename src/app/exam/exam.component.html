@@ -1,0 +1,20 @@
+<div class="container">
+    <div *ngFor="let q of questionsData">
+        <mat-card class="mat-card">
+            <mat-card-header>
+                <mat-card-title>{{q.questionText}}</mat-card-title>
+            </mat-card-header>
+            <button (click)="onButtonClick('A', q)" mat-stroked-button color="primary">A {{q.answerOptionA}}</button>
+            <button (click)="onButtonClick('B', q)" mat-stroked-button color="primary">B {{q.answerOptionB}}</button>
+            <button (click)="onButtonClick('C', q)" mat-stroked-button color="primary">C {{q.answerOptionC}}</button>
+            <button (click)="onButtonClick('D', q)" mat-stroked-button color="primary">D {{q.answerOptionD}}</button>
+        </mat-card>
+    </div>
+    <button class="submit-btn" mat-flat-button color="warn">Nộp bài</button>
+</div>
+
+<mat-button-toggle-group class="mat-button-toggle-group" name="fontStyle" aria-label="Font Style">
+    <mat-button-toggle value="bold">Bold</mat-button-toggle>
+    <mat-button-toggle value="italic">Italic</mat-button-toggle>
+    <mat-button-toggle value="underline">Underline</mat-button-toggle>
+</mat-button-toggle-group>

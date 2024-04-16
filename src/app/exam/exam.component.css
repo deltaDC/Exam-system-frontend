@@ -1,0 +1,40 @@
+.mat-card {
+    margin-top: 30px;
+    border: 1px solid black;
+}
+
+button {
+    padding: 20px;
+    margin: 8px 30px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.mat-card {
+    padding: 4px;
+    margin: 10px 20px;
+    max-width: 800px;
+    min-width: 600px;
+}
+
+.submit-btn {
+    margin: 20px;
+    padding: 20px;
+    max-width: 800px;
+    min-width: 600px;
+}
+
+.clicked-button {
+    background-color: green;
+    color: white;
+}
+
+.mat-button-toggle-group {
+    display: flex;
+    flex-direction: column;
+}
